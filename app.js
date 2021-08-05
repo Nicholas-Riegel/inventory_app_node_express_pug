@@ -16,7 +16,7 @@ const app = express()
 // );
 // mongoose.connection.on('error', console.error.bind(console, 'mongodb connection error:'));
 
-var mongoDB = process.env.MONGODB_URI || process.env.dev_db_url;
+var mongoDB = process.env.dev_db_url;
 
 const connectDB = async () => {
     try {
