@@ -1,0 +1,16 @@
+.new-cat{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 20vh;
+    justify-content: space-around;
+}
+.new-cat label{
+    font-weight: bold;
+}
+
+.new-cat input{
+    font-size: inherit;
+    padding: .3rem;
+    width: 20%;
+}

@@ -1,0 +1,18 @@
+extends layout 
+block content 
+  .content 
+    .content-box
+      .edit-delete
+        h1 Add New Product for Category: #{cat.name}
+        form.new-prod-form.edit-form(method='POST' action='/category/'+cat._id+'/new_product')
+          label New Product Name: 
+          input(type='text' name='newProdName')
+          label Description: 
+          textarea(name='newProdDescription')
+          label Price: 
+          input(type='float' name='newProdPrice')
+          label Quantity: 
+          input(type='number' name='newProdQuantity') 
+          .buttons-div
+            button Submit
+            a(href='/category/'+cat._id) Cancel

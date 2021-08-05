@@ -1,0 +1,17 @@
+.edit-cat-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 20vh;
+    justify-content: space-around;
+}
+
+.edit-cat-form input{
+    font-size: inherit;
+    padding: .3rem;
+    width: 20%;
+}
+
+.edit-cat-form label{
+    font-weight: bold;
+}

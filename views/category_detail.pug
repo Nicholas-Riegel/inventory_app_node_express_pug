@@ -1,0 +1,23 @@
+extends layout 
+block content 
+  .content
+    .content-box
+      header
+        h1 Category: #{cat.name}
+        a(href='/category/'+cat._id+'/new_product') Add New Product
+      #descriptor-row
+        h2.product-col Product 
+        h2.description-col Description 
+        h2.price-col Price 
+        h2.quantity-col Quantity
+      for x in prodList
+        .cat-detail-subrow
+          p.product-col=x.name 
+          p.description-col=x.description
+          p.price-col.price-rows=x.price
+          p.quantity-col.quantity-rows=x.quantity
+          a.edit-cells(href='/category/'+cat._id+'/product/'+x._id+'/edit') Edit
+          //- form.form-cells(method='GET' action='/category/'+cat._id+'/product/'+x._id+'/delete')
+          //-   button Delete
+          a.edit-cells(href='/category/'+cat._id+'/product/'+x._id+'/delete') Delete
+        

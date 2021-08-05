@@ -1,0 +1,12 @@
+extends layout 
+block content
+  .content
+    .content-box
+      .edit-delete
+        h1 Edit Category 
+        form.edit-cat-form(method='POST', action='/category/edit/' + catToEdit._id)
+          label Name: 
+          input(type='text' name='editedCat' value=catToEdit.name)
+          .buttons-div
+            button Submit
+            a(href='/category/'+ catToEdit._id) Cancel

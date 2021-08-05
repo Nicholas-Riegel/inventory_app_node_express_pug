@@ -1,0 +1,12 @@
+extends layout 
+block content 
+  .content
+    .content-box
+      .edit-delete
+        h1 Add New Category
+        form.new-cat(method='POST', action='/category')
+          label New Category Name:
+          input(type='text', name='newCatName')
+          .buttons-div
+            button Add
+            a(href='/') Cancel

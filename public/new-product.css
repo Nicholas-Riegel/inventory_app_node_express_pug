@@ -1,0 +1,7 @@
+.new-prod-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 50vh;
+    justify-content: space-around;
+}

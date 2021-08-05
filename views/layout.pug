@@ -1,0 +1,23 @@
+doctype 
+html 
+  head 
+    link(rel="stylesheet", href="/general.css")
+    link(rel="stylesheet", href="/nav.css")
+    link(rel="stylesheet", href="/index.css")
+    link(rel="stylesheet", href="/category-detail.css")
+    link(rel="stylesheet", href="/edit-product.css")
+    link(rel="stylesheet", href="/edit-category.css")
+    link(rel="stylesheet", href="/new-category.css")
+    link(rel="stylesheet", href="/new-product.css")
+  body 
+    nav
+      .nav-main
+        a(href='/')
+          h1 Inventory App
+        a(href='/') 
+          h2 Home
+      if cat_message 
+        .cat-message-div=cat_message
+      if prod_message 
+        .prod-message-div=prod_message
+    block content

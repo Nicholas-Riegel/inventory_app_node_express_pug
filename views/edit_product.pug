@@ -1,0 +1,19 @@
+extends layout 
+block content
+  .content 
+    .content-box
+      .edit-delete
+        h1 Category: #{cat.name}
+        h2 Product to Edit:
+        form.edit-form(method='POST', action='/category/'+cat._id+'/product/'+prod._id+'/edit')
+          label Name: 
+          input(type='text' name='prodName' value=prod.name)
+          label Description:
+          textarea(name='prodDescription')=prod.description
+          label Price:
+          input(type='float' min=0 max=999999 name='prodPrice' value=prod.price)
+          label Quantity:
+          input(type='number' min=0 max=999999 name='prodQuantity' value=prod.quantity)
+          .buttons-div
+            button Submit
+            a(href='/category/'+cat._id) Cancel

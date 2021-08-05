@@ -1,0 +1,12 @@
+extends layout 
+block content 
+  .content
+    .content-box
+      header
+        h1 #{title}
+        a(href='/category/new') Add Category 
+      for x in catList 
+        .home-subrows(onclick=`location.href="/category/${x._id}"`) 
+          p=x.name
+          a(href='/category/edit/'+x._id) Edit Category
+          a(href='/category/delete/'+x._id) Delete Category
