@@ -17,7 +17,7 @@ const app = express()
 // mongoose.connection.on('error', console.error.bind(console, 'mongodb connection error:'));
 const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.MONGO_URI,
+        await mongoose.connect(process.env.dev_db_url,
             {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
