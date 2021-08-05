@@ -15,9 +15,12 @@ const app = express()
 //     () => console.log('Connected to local mongodb.')
 // );
 // mongoose.connection.on('error', console.error.bind(console, 'mongodb connection error:'));
+
+var mongoDB = process.env.MONGODB_URI || process.env.dev_db_url;
+
 const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.dev_db_url,
+        await mongoose.connect(mongoDB,
             {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
