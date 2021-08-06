@@ -8,13 +8,14 @@ const app = express()
 
 // db connection
 const mongoDB = process.env.MONGODB_URI || process.env.dev_db_url;
+
 const connectDB = async () => {
     try {
         await mongoose.connect(mongoDB,
             {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
-                useFindAndModify: false
+                // useFindAndModify: false
             }
         );
         console.log('MongoDB-Atlas connection SUCCESS')
