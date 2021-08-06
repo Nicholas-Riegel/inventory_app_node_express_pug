@@ -1,13 +1,16 @@
 const express = require('express')
 const mongoose = require('mongoose')
 require('dotenv/config')
+const compression = require('compression')
+const helmet = require('helmet')
 
 const app = express()
 
 // db connection
+const mongoDB = process.env.MONGODB_URI || process.env.dev_db_url;
 const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.MONGO_URI,
+        await mongoose.connect(mongoDB,
             {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
@@ -29,6 +32,8 @@ app.set('views', __dirname + '/views')
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'))
+app.use(compression())
+app.use(helmet())
 
 app.use('/', require('./routes/index'))
 
