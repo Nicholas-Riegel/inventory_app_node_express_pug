@@ -6,7 +6,7 @@ block content
         h1 #{title}
         a(href='/category/new') Add Category 
       for x in catList 
-        .home-subrows(onclick=`location.href="/category/${x._id}"`) 
-          p=x.name
-          a(href='/category/edit/'+x._id) Edit Category
-          a(href='/category/delete/'+x._id) Delete Category
+        .home-subrows 
+          a(href='/category/'+x._id)=x.name
+          a.home-a-edit(href='/category/edit/'+x._id) Edit
+          a(href='/category/delete/'+x._id) Delete

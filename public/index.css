@@ -9,20 +9,8 @@
 .home-subrows:hover{
     background-color: rgba(255, 255, 255, 0.644);
 }
-.home-subrows p{
-    font-size: 1.5rem;
-    margin: 0;
-    margin-right: auto;
-    padding: 0;
-}
 
-.home-subrows a{
-    margin-left: 1rem;
-}
-
-.home-subrows > div{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    height: 100%;
+.home-a-edit{
+    margin-left: auto;
+    margin-right: 2rem;
 }
