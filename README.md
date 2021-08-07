@@ -1,5 +1,7 @@
 # Inventory App
 
+View at: https://radiant-citadel-62238.herokuapp.com/
+
 Description:
 
 This app allows user to keep track of products in inventory. Products are listed by category. Products include: name, description, category, price and quantity. 
