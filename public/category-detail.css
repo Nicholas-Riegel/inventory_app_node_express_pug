@@ -66,11 +66,11 @@
 }
 
 .cat-message-div{
-    background-color:red;
+    background-color:lawngreen;
     padding: .5rem 2rem;
 }
 
 .prod-message-div{
-    background-color:lawngreen;
+    background-color:aqua;
     padding: .5rem 2rem;
 }
