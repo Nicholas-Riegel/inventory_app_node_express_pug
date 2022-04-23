@@ -7,7 +7,7 @@ const helmet = require('helmet')
 const app = express()
 
 // db connection
-const mongoDB = process.env.MONGODB_URI || process.env.dev_db_url;
+const mongoDB = process.env.dev_db_url;
 
 const connectDB = async () => {
     try {
