@@ -1,6 +1,6 @@
 # Inventory App
 
-View at: [UNDER CONSTRUCTION]
+View at: https://inventory-app0.herokuapp.com/
 
 Description:
 
