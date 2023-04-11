@@ -1,6 +1,6 @@
 # Inventory App
 
-View at: https://radiant-citadel-62238.herokuapp.com/
+View at: https://inventory-app0.herokuapp.com/
 
 Description:
 
